@@ -1,0 +1,34 @@
+//layout.jade
+doctype html
+html
+	head
+		title OCFC
+		link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
+		link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet", href="/vendor/toastr/toastr.css")
+		link(rel="stylesheet", href="/css/general.css")
+
+		link(rel="stylesheet", href="/css/account/navbar-login.css")
+		link(rel="stylesheet", href="/css/account/index.css")
+
+		link(rel="stylesheet", href="/css/fellowship/member.css")
+		link(rel="stylesheet", href="/css/fellowship/create-fellow.css")
+		link(rel="stylesheet", href="/css/fellowship/fellowship.css")
+		link(rel="stylesheet", href="/css/fellowship/join-fellow.css")
+		link(rel="stylesheet", href="/css/fellowship/event.css")
+		link(rel="stylesheet", href="/css/fellowship/fellow-photo.css")
+		link(rel="stylesheet", href="/css/fellowship/fellow-resource.css")
+
+		meta(name='viewport', content='initial-scale=1,user-scalable=no,maximum-scale=1')
+
+	body(ng-app='app' ng-controller='CommonCtrl')
+		//include currentUser file
+		include currentUser
+		block main-content
+		//include scripts file
+		include scripts
+
+
+
+
+

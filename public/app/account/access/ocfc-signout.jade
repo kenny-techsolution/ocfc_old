@@ -1,0 +1,18 @@
+//ocfc-signout.jade
+ul.nav.navbar-nav.navbar-right-menu(ng-show="identity.isAuthenticated()")
+	li.dropdown
+		a.dropdown-toggle(href="#", data-toggle="dropdown")
+			img(ng-src='/css/images/kenny_face.jpg')
+			b.caret
+			ul.dropdown-menu
+				li(ng-show="identity.currentUser.isAdmin()")
+					a(href="/admin/users") User Admin
+				li
+					a(href="/profile") Profile
+				li
+					a(href="", ng-click="signout()") Sign Out
+
+
+
+
+

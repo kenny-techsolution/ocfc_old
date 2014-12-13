@@ -1,0 +1,13 @@
+#event-banner {
+  background-color: #3a92c8;
+  width-right: auto;
+  width-left: auto;
+  height: 200px;
+}
+#event-banner .row {
+  margin-top: 130px;
+}
+#event-banner .row button.btn {
+  margin-top: 12px;
+  border: 1px solid #000;
+}

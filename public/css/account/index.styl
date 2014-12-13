@@ -1,0 +1,205 @@
+//index.jade, Side Bar Menu added on 4.29.2014
+#intro-pg
+	position fixed
+	width 100%
+	top 70px
+	height 100%
+	background-color #3a92c8
+	background radial-gradient(circle, #94d2f8, #3a92c8)
+	z-index 5000
+
+#signupSection
+	.well
+		form.form-horizontal fieldset
+			font-family 'Freight Sans Bold', 'lucida grande', tahoma, verdana, arial, sans-serif
+			legend
+				font-size 40px
+			p
+				font-size 22px
+
+.sub-menu
+	a
+		background-color #eeeeee
+		padding-left 20px
+
+	span.glyphicon
+		padding-left 10px
+		padding-right 10px
+
+.sub-menu-actions
+	a
+		font-weight bold
+		color #2fa9cf
+		background-color #C9C9C9
+	a.list-group-item
+		border-bottom 1px solid #ddd
+	a.list-group-item:last-child
+		color #E9DE60
+		border-left 1px solid #DFDDDD !important
+	a.list-group-item:last-child:hover
+		color white
+		background-color #E9DE60 !important
+	a:hover
+		color white
+		background-color #2fa9cf !important
+	span.glyphicon
+		padding-left 10px
+		padding-right 10px
+
+footer
+	padding-left 15px
+	padding-right 15px
+
+	p
+		border-top 1px solid black
+
+.navbar-form
+	.form-group
+		margin-left 10px
+	button
+		margin-left 10px
+
+//course-list.jade
+.top-padding-med
+	padding-top 10px
+
+.margin-left-med
+	margin-left 10px
+
+//join-fellow.jade, added on 4.29.2014 to style for joinFellow page
+.content-right
+	position absolute
+	width 100%
+	padding-left 400px
+	margin-left auto
+	margin-right auto
+	height 100%
+	background-color transparent
+	overflow-y auto
+	z-index 1
+
+.content-left
+	position absolute
+	top 0px
+	left 0px
+	width 400px
+	margin-left auto
+	margin-right auto
+	height 100%
+	overflow-y auto
+	overflow-x hidden
+	z-index 2
+
+.content-left .container
+	width 601px
+
+#joinFellow
+	.list-page
+		padding-top 60px
+		width 790px
+		margin-left auto
+		margin-right auto
+		.fellowships-wrapper
+			.well.well-lg.fellowship
+				position relative
+				background white
+				.btn-group
+					position absolute
+					right 60px
+
+//Sidebar added on 4.29.2014
+body
+	padding-top 60px
+	overflow hidden
+
+#header
+	margin-bottom: 0px;
+	min-width 1024px
+	height 70px
+	-webkit-box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.70);
+	-moz-box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.70);
+	box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.70);
+	background-image url('../images/ocfc_logo.png');
+	background-repeat no-repeat
+	background-color lightgray
+
+#wrapper
+	min-height 100%
+	height 100%
+	width 100%
+	min-width 1024px
+	position absolute
+	top 0px
+	left 0
+	display inline-block
+
+#main-wrapper
+	height 100%
+	overflow-y auto
+	padding 70px 0 0px 200px
+	width: 100%
+
+#main
+	position relative
+	height 100%
+	overflow-y auto
+	background-color #f0f0f0
+	font-size 12px
+	.btn
+		font-size 12px
+	.form-control
+		font-size 12px
+
+.container.ng-scope
+	width 530px
+	margin-left 15px
+
+#sidebar-wrapper
+	#sidebar
+		height 100%
+		padding 70px 0 0px 0
+		position fixed
+		left 0px
+		border-right 0px solid gra
+		float left
+		width 200px
+		z-index 400
+		-webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.70);
+		-moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.70);
+		box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.70);
+		ul.nav.list-group
+			li.sub-menu.sub-menu-actions.row
+				width 215px
+				a.list-group-item
+					border-radius 0
+					font-size 12px
+		.fellowship-container
+			padding-left 0px
+			font-size 12px
+			.fellowship-sub-menu
+				.menu-item a
+					background-color #454147
+					color #ffffff
+					border-radius 0
+					padding 5px 30px 5px 30px
+					font-size 12px
+
+.fellowship-sub-menu
+	.list-group-item
+		border none
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove
+	-webkit-transition 0.2s linear all
+	transition 0.2s linear all
+
+	/* remember to add this */
+	display block !important
+	opacity 1
+	height 200px
+
+.animate-show.ng-hide
+	opacity 0
+	height 0px
+
+

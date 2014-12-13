@@ -1,0 +1,10 @@
+//If statement is true then convert record into JSON format
+//turns bootstrappedUser object into string to be sent over to server
+//currentUser.jade
+if !!bootstrappedUser
+	script.
+		window.bootstrappedUserObject = !{JSON.stringify(bootstrappedUser)}
+
+
+
+

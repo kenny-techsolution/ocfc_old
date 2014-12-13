@@ -1,0 +1,30 @@
+//5.22.2014, created a OCFC page for administrative approval
+//which will dynamically generate data stored in Mongodb
+//ocfc-admin.jade
+#content
+	.list-page
+		.fellowships-wrapper(ng-repeat='fellowship in fellowships')
+			.well.well-lg.fellowship(ng-bind-template="{{fellowsihp.name}} {{fellowship.zipcode}} {{fellowship.status}} {{fellowship.proof}} {{fellowship.address}} {{fellowship.description}}")&nbsp;
+				.btn-group
+					button.btn.btn-default(type='button',ng-click='approveFellowship(fellowship)',ng-show="fellowship.status=='Waiting for Approval'") Approve Fellowship
+					button.btn.btn-default(type='button',ng-show="fellowship.status=='Waiting for Approval'",data-target="#RejConfirmation", data-toggle="modal",ng-click="setModalFellowshipIndex($index)") Reject Fellowship
+
+#RejConfirmation.modal.fade
+	.modal-dialog.modal-dialog-center
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.modal-title Please provide reason for remove or reject:
+			.modal-body
+				textarea.form-control(rows='4',ng-model='reason')
+			.modal-footer
+				button.btn.btn-primary(type='button',ng-click='rejectFellowship()') Confirm
+				button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+		//
+			/.modal-content
+		//
+			/.modal-dialog
+	//
+		/.modal
+
+

@@ -1,0 +1,45 @@
+//fellowship.jade
+#standardCol
+	.intro-banner
+		img(src='/css/images/IMG_5501.JPG')
+		.name.h2(ng-bind="name")&nbsp;
+		.about.p(ng-bind="about")&nbsp;
+		.members
+			.imgs
+				ul.media-list
+					li.media
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+						a.pull-left(ng-href="/fellowship/{{post.fellow_object_id}}/photo")
+							img.media-object(src='/css/images/IMG_5501.jpg', alt='...')
+		.count
+			a(href='/fellowship/{{post.fellow_object_id}}/members')
+			p 12 members
+
+	.highlight-sections
+		.section.one
+			h4 What's new
+		.section.two
+			h4 Schedule
+		.section.three
+			h4 Sharing

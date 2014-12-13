@@ -1,0 +1,32 @@
+#standardCol .btn-group {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+#resource-filter.well.row {
+  display: inline-flex;
+  width: 775px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+#resource-filter.well.row .category-filter {
+  width: 180px;
+  border-right: 1px solid #000;
+}
+#resource-filter.well.row .category-type {
+  width: 420px;
+  display: flex;
+}
+#resource-filter.well.row .category-type .input-group {
+  padding-right: 15px;
+}
+#resource-filter.well.row .content-filter {
+  width: 180px;
+  border-right: 1px solid #000;
+}
+#resource-filter.well.row .content-type {
+  width: 420px;
+  display: flex;
+}
+#resource-filter.well.row .content-type .input-group {
+  padding-right: 15px;
+}

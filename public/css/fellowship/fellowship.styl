@@ -1,0 +1,730 @@
+//fellowship.jade, added on 5.23.2014 to style for Fellowship update status box
+#standardCol
+	.intro-banner
+		display block
+		width 760px
+		height 326px
+		img
+			display inline-block
+			width 342px
+			height 295px
+			margin-top 12px
+		.name
+			display inline-block
+			width 176px
+			height 40px
+			position: absolute
+			top: 5px
+			left: 400px
+		.about
+			display: inline-block
+			width: 362px
+			height: 100px
+			position: absolute
+			top: 78px
+			left: 399px
+		.members
+			display: inline-block
+			width: 302px
+			height: 109px
+			position: absolute
+			top: 192px
+			left: 398px
+			.imgs img
+				display: inline-block
+				width: 40px
+				height: 40px
+		.count
+			display: inline-block
+			width: 66px
+			height: 46px
+			font-size: 11px
+			position: absolute
+			top: 282px
+			right: 346px
+	.highlight-sections
+		.section.one
+			display: inline-block
+			margin-left: 20px
+		.section.two
+			display: inline-block
+			margin-left: 150px
+		.section.three
+			display: inline-block
+			margin-left: 150px
+
+.common-widget-ui.well
+	margin: 50px 50px 50px 50px
+	height: auto
+	padding: 0px
+	.post-header-row
+		width 662px
+		height 37px
+		margin-right 5px
+		margin-left 5px
+		border-bottom 1px solid lightgrey
+		padding 0px
+		.post-header-title
+			position relative
+			height 100%
+			p
+				margin-top 9px
+				font-size 15px
+	ocfc-wall-category
+		.header-icons
+			display: inline-block
+			position: absolute
+			padding: 5px
+			top: 7px
+			width: 80px
+			color #333333
+			&:hover
+			&:active
+				border-radius 3px
+				text-decoration none
+				color white
+			span
+				font-weight bold
+
+		.header-icons.post
+			left: 100px
+			color #E47168
+			&:hover
+			&:active
+				background-color #E47168
+				color white
+
+		.header-icons.event
+			left: 187px
+			color #8D778F
+			&:hover
+			&:active
+				background-color #8D778F
+				color white
+
+		.header-icons.testimony
+			left: 274px
+			color #76a5df
+			width: 100px
+			&:hover
+			&:active
+				background-color #76a5df
+				color white
+
+		.header-icons.question
+			left: 375px
+			color #5fcac6
+			width: 100px
+			&:hover
+				background-color #5fcac6
+				color white
+
+	.common-text-input textarea
+		height: 75px !important
+		margin-top: 37px
+		width: 100%
+		resize: none
+		border-color transparent
+		&:focus
+			box-shadow none
+
+	.common-footer
+		width 100%
+		height: 70px
+		margin-right 0
+		margin-left 0
+		border-top 1px solid lightgrey
+		padding 0px
+		.common-button-container
+			position relative
+			width 80px
+			display inline-block
+			top 5px
+			left 0px
+			button.btn
+				width 81px
+				margin-top 5px
+
+	.event-scheduler
+		display inline-block
+		width 40%
+		position relative
+		top -20px
+		height 142px
+		p
+			width 38px
+			display inline-block
+			text-align right
+			position: relative
+			left: 40px
+		p.welcome
+			left 24px
+		.calendar
+			display inline-block
+			width 121px
+			margin-right 8px
+			margin-top 12px
+			position relative;
+			left 47px
+			input
+				height 23px
+				width 119px
+		.time
+			display inline-block
+			position relative
+			left 41px
+		.input
+			width 214px
+			display inline-block
+			position relative
+			left 47px
+			input
+				width 214px
+
+	.button.btn
+		position relative
+		display inline-block
+		top 5px
+		padding-left 15px
+		padding-right 15px
+		.caret
+			margin-left 4px
+	ocfc-post-types
+		.type-container
+			height 33px
+			display inline-block
+			position relative
+			p
+				width 33px
+				position relative
+				display inline-block
+				top 5px
+				margin-left 25px
+			ul.dropdown-menu
+				left 57px
+				min-width 0px
+
+	ocfc-view-permission
+		p
+			display inline-block
+		ocfc-toggle-button
+			display inline-block
+
+			.yes
+				display inline-block
+				margin-left: 10px
+				border-top-left-radius: 4px
+				border-bottom-left-radius: 4px
+				cursor pointer
+
+				border-top 1px solid #696969
+				border-left 1px solid #696969
+				border-bottom 1px solid #696969
+				//border-right 1px outset
+				//border-bottom 1px outset
+				background-color: #D5D5D4;
+				color: #7A7E80
+				font-weight: bold
+				padding: 2px 8px 2px 8px;
+				font-size: 10px;
+				&.active
+					background-color: #5CC3CB
+					color #ffffff
+					//border-left 1px inset
+					//border-top 1px inset
+					//box-shadow inset 1px 1px 3px 0px rgba(50, 50, 50, 0.63)
+					box-shadow inset -1px 1px 2px 0px rgba(50, 50, 50, 0.60)
+
+			.no
+				display inline-block
+				//border-right 1px outset
+				//border-bottom 1px outset
+				border-top-right-radius: 4px
+				border-bottom-right-radius: 4px
+				cursor pointer
+
+				border-top 1px solid #696969
+				border-right 1px solid #696969
+				border-bottom 1px solid #696969
+
+				background-color: #D5D5D4;
+				color: #7A7E80
+				font-weight: bold
+				padding: 2px 8px 2px 8px;
+				font-size: 10px;
+				&.active
+					background-color: #e47168
+					color #ffffff
+					//border-top 1px inset
+					//border-left 1px inset
+					box-shadow inset -1px 1px 2px 0px rgba(50, 50, 50, 0.60)
+
+	ocfc-post-icons
+		.icons-container
+			width 160px
+			position relative
+			display inline-block
+			top 6px
+			a
+				color #000000
+				span
+					position relative
+					width 40px
+
+.post-show.ng-hide-remove
+	-webkit-transition 0.4s linear all
+	transition 0.4s linear all
+	/* remember to add this */
+	display block !important
+	opacity 1
+
+/*height 200px*/
+
+.post-show.ng-hide-add
+	-webkit-transition 0.1s linear all
+	transition 0.1s linear all
+	/* remember to add this */
+	display none !important
+	opacity 0
+	height 0px
+
+.post-show.ng-hide
+	opacity 0
+	height 0px
+
+#testimony-widget.well
+	height 135px
+	.testimony-title
+		margin-top: 9px
+		border-bottom: 1px solid lightgray
+		font-size: 15px
+		position relative
+		left 20px
+		width 621px
+
+	.common-text-input
+		border-color transparent
+		width 644px
+		position relative
+		left 9px
+
+#event-widget
+	height 222px
+
+	.event-name
+		width 344px
+		position relative
+		left 24px
+		font-size 15px
+		margin-right 15px
+		margin-top 5px
+
+	.event-detail
+		width 345px
+		display inline-block
+		position relative
+		top -81px
+		left 10px
+		margin-right 20px
+		border transparent
+		border-top 1px solid #d3d3d3
+
+#post-feed.well
+	margin-top 0px
+	height auto
+	background-color: transparent
+	box-shadow: none
+	border: none
+	ocfc-filter-by-types
+		display block
+		width 100%
+		height 50px
+		.type-filter.container
+			height 30px
+			width 100%
+			div
+				display inline-block
+				border 1px outset
+				border-radius 5px
+				width 65px
+				height 28px
+				margin-right 15px
+				text-align center
+				margin-top 14px
+				font-weight bold
+				p
+					margin-bottom 0px
+					margin-top 5px
+			div.question
+				&:hover
+					border-color #5fcac6
+				&:active
+					color white
+					background-color #5fcac6
+			div.testimony
+				&:hover
+					border-color #76a5df
+				&:active
+					color white
+					background-color #76a5df
+			div.general
+				&:hover
+					border-color #a5adce
+				&:active
+					color white
+					background-color #a5adce
+			div.event
+				&:hover
+					border-color #6f7692
+				&:active
+					color white
+					background-color #6f7692
+
+	.question-feed-display
+		.post-type-icon
+			background-color #5FCAC6
+
+	.testimony-feed-display
+		.post-type-icon
+			background-color #76A5DF
+		.article
+			background-color #E4DFDF
+			padding 15px
+			border-radius 5px
+			.content-title
+				font-family serif
+				font-size 24px
+				border-bottom 1px dashed #a9a9a9
+				vertical-align top
+			.content-body
+				margin-top 10px
+		ocfc-post-res-icons
+			a span
+				margin-right 15px
+				position inherit
+				padding 6px
+				color #333
+				border 1px transparent
+				&:hover
+					background-color #76A5DF !important
+					color #ffffff
+
+.general-feed-display
+	.post-type-icon
+		background-color #A5ADCE
+	.post-content-photos
+		background-color white
+		height: 240px
+		position relative
+		.lg-content
+			position absolute
+			width 357px
+			height 240px
+			overflow hidden
+			img
+				width 357px
+				height auto
+		.rt-content
+			position absolute
+			left 360px
+			width 180px
+			height 117px
+			overflow-y hidden
+			img
+				width 180px
+				height auto
+		.rb-content
+			position absolute
+			left 360px
+			top 120px
+			width 180px
+			height 120px
+			overflow-y hidden
+			img
+				width 180px
+				height auto
+	ocfc-post-res-icons
+		a span
+			margin-right 15px
+			position inherit
+			padding 6px
+			color #333
+			border 1px transparent
+			&:hover
+				background-color #A5ADCE !important
+				color #ffffff
+
+.event-feed-display
+	margin-top 0px
+	margin-bottom 0px
+	position relative
+	height 297px
+	border-color transparent
+	background-color: transparent
+	.post-type-icon
+		background-color #6F7692
+
+	.post-content
+		div.event-container
+			border 1px solid #696969
+			display block
+			border-radius 5px
+			background-color #ffffff
+			.date-info
+				border-right 1px solid #696969
+				height 92px
+				width 70px
+				display inline-block
+				.mm-yy
+					line-height 65px
+					font-family serif
+					height 65px
+					border-bottom 1px solid #696969
+					font-size: 32px
+					text-align center
+				.event-time
+					height 25px
+					line-height 25px
+					font-weight bold
+					text-align center
+			div.event-info
+				vertical-align top
+				display inline-block
+				background-color #e4dfdf
+				border-top-right-radius 5px
+				border-bottom-right-radius 5px
+				div.event-title
+					height 46px
+					width 468px
+					font-size 20px
+					font-family serif
+					text-indent 20px
+					line-height 46px
+					border-top-right-radius 5px
+				div.event-detail-info
+					height 46px
+					position relative
+					border-top 1px solid #696969
+					border-bottom-right-radius 5px
+					div.event-description
+						display inline-block
+						width 328px
+						height 46px
+						position relative
+						border-right 1px solid #696969
+						p
+							margin-top 4px
+							margin-left 20px
+					div.response
+						display inline-block
+						height 46px
+						width 46px
+						border-right 1px solid #696969
+						text-align center
+						vertical-align top
+						background-color rgb(162, 157, 187)
+						.status-num
+							font-size: 18px
+							margin-top: 5px
+							color #ffffff
+						.status-label
+							position: relative
+							top: -5px
+							font-size: 11px
+							color #ffffff
+					div.response.denied
+						border-right none
+						border-bottom-right-radius: 5px
+						width 48px
+		ocfc-post-res-icons
+			a span
+				margin-right 15px
+				position inherit
+				padding 6px
+				color #333
+				border 1px transparent
+				&:hover
+					background-color #6F7692 !important
+					color #ffffff
+
+.content
+	display inline-block
+	width 400px
+	position relative
+	margin-left 10px
+	padding-top 7px
+	padding-bottom 3px
+	P:first-child
+		margin-bottom 0px
+	p:last-child
+		margin-bottom 0px
+		font-size 10px
+
+img.gravitar
+	width: 30px
+	height: 30px
+	border-radius: 25px
+	background-color: #d3d3d3
+	display inline-block
+	top -9px
+	position relative
+
+.date-separator
+	border: 1px solid darkgray
+	text-align: center
+	padding 2px 10px 2px 10px
+	border-radius 5px
+	width: 55px
+	margin 5px auto 0px 77px
+	color darkgray
+
+.common-post-ui
+	width 750px
+	position relative
+	.line-decor
+		position absolute
+		border-bottom 1px solid darkgray
+		top 0px
+		width 129px
+		height 24px
+	.dot-decor
+		border-radius 100px
+		width 9px
+		height 9px
+		position absolute
+		left 100px
+		top 19px
+		background-color darkgray
+	.timeline
+		border-right 1px solid darkgray
+		height 100%
+		width 1px
+		position absolute
+		left 104px
+	.post-type-icon
+		margin-right 13px
+		margin-top 6px
+		border 1px outset
+		width 93px
+		height 34px
+		position relative
+		display inline-block
+		vertical-align top
+		border-radius 5px
+		.glyphicon
+			height 12px
+			width 12px
+			color white
+			display inline-block
+			margin-top 8px
+			margin-left 7px
+		span
+			height 12px
+			color white
+			display inline-block
+			margin-left 5px
+
+	ocfc-user-image
+		display inline-block
+		width 40px
+		height 40px
+		position relative
+		margin-top 3px
+		margin-left 12px
+		vertical-align top
+		.user-image
+			width 100%
+			border-radius 25px
+			position absolute
+	.post-content
+		position relative
+		display inline-block
+		width 540px
+		border-color transparent
+		margin-left 9px
+		margin-bottom: 30px;
+		.post-content-input
+			background-color #E4DFDF
+			padding 15px
+			border-radius 5px
+			word-wrap break-word
+		.user-comment
+			background-color #C9CED3
+			border-top 1px solid #DDE2E7
+			ocfc-user-image
+				margin-top 5px
+				width 30px
+				height 30px
+				padding-bottom 5px
+			.text-input
+				display inline-block
+				width 441px
+				margin-left 5px
+				textarea
+					margin 0px 2px 0px 0px
+					height 27px
+					width 438px
+					margin-top 6px
+			button
+				vertical-align bottom
+				display inline-block
+				margin-bottom 5px
+		ocfc-post-res-icons
+			display block
+			height 20px
+			margin-bottom 10px
+			a span
+				margin-right 15px
+				position inherit
+				padding 6px
+				color #333
+				border 1px transparent
+				&:hover
+					background-color #5FCAC6
+					color #ffffff
+	ocfc-post-heading
+		.common-name-heading
+			font-size 14px
+			margin-bottom 6px
+			color #548ABB
+			margin-top: 11px
+			display: block
+			.time-stamp
+				display inline-block
+				margin-left 10px
+				font-size 11px
+				color #a9a9a9
+
+//fellowship-visi-menu
+.fellowship-visi-menu
+	position absolute
+	left -39px
+	li
+		display block
+		height 35px
+		border 1px solid grey
+		a
+			display block
+			width 100%
+			height 100%
+
+.postAnimate.ng-enter
+	-webkit-transition .3s ease all
+	-moz-transition .3s ease all
+	-o-transition .3s ease all
+	transition .3s ease all
+	position relative
+	transition-delay 0.5s
+
+.postAnimate.ng-enter
+	display block
+	max-height 0px
+	opacity 0
+
+.postAnimate.ng-enter.ng-enter-active
+	max-height 600px
+	opacity 1
+
+
+
+

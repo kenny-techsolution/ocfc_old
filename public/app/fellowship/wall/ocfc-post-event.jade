@@ -1,0 +1,36 @@
+//ocfc-post-event.jade
+.event-feed-display.common-post-ui
+	.line-decor
+	.dot-decor
+	.vertical-line.timeline
+	.post-type-icon
+		.glyphicon.glyphicon-calendar
+		span Event
+	ocfc-user-image
+	.post-content
+		ocfc-post-heading
+		.event-container
+			.date-info
+				.mm-yy{{post.postDate}}
+				.event-time{{post.from_date}}&nbsp{{post.to_date}}
+			.event-info
+				.event-title{{post.title}}
+				.event-detail-info
+					.event-description
+						p{{post.content}}
+					.response.invited
+						.status-num 25
+						.status-label invited
+					.response.replied
+						.status-num 2
+						.status-label replied
+					.response.denied
+						.status-num 30
+						.status-label denied
+		ocfc-post-res-icons
+		.user-comment
+			ocfc-user-image
+			.content
+				p This is a great question!
+				p Jane 10:20PM
+		ocfc-user-comment-input

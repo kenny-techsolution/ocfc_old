@@ -1,0 +1,19 @@
+//ocfc-collapsible-menu.jade
+li.fellowship-menu(ng-click='open=!open')
+	a.list-group-item(ng-href='/fellowship/{{fellowship._id}}')
+		i.icon-home.icon-1x
+		| {{fellowship.name}}
+		.span.badge 42
+li.fellowship-sub-menu.animate-show(ng-hide='!open')
+	.menu-item
+		a.list-group-item(href='') Home
+	.menu-item
+		a.list-group-item(ng-href="/fellowship/{{fellowship._id}}/wall")  Wall
+	.menu-item
+		a.list-group-item(ng-href="/fellowship/{{fellowship._id}}/photo") Gallery
+	.menu-item
+		a.list-group-item(ng-href="/fellowship/{{fellowship._id}}/resource") Resource
+	.menu-item
+		a.list-group-item(ng-href="/fellowship/{{fellowship._id}}/event") Events
+	.menu-item
+		a.list-group-item(ng-href="/fellowship/{{fellowship._id}}/members") Members

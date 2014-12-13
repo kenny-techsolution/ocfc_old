@@ -1,0 +1,46 @@
+//member.jade
+#standardCol
+	.approve.common-section(ng-if='IdentitySvc.currentUser.isAdmin()')
+		.glyphicon.glyphicon-ok
+		span To Approve
+	.approve-members.members-ui(ng-repeat='member in members| filter:search | filter:filterMemByStatus')
+		.profile
+			ocfc-user-image
+		.status Seeker
+		.detail-info
+			.name{{member.firstName}}&nbsp{{member.lastName}}
+			.description Hi my name is Mei Zhang.  I recently moved to San Francisco all the way from.
+			button(ng-click='approveMember(member)')
+				.glyphicon.glyphicon-plus Approve
+
+	.members.common-section
+		.glyphicon.glyphicon-ok
+		span Members
+	//need to filter by member
+	.existing-members.members-ui(data-ng-repeat="member in members | filter:search | filter:filterMemByRole")
+		.profile
+			ocfc-user-image
+		.status{{member.status}}
+		.detail-info
+			div.btn-group
+				button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+					span.caret
+				ul.dropdown-menu(role='menu')
+					li
+						a(href='#',ng-click='rejectMem(member)') Reject
+			.name{{member.firstName}}&nbsp{{member.lastName}}
+			.description Hi my name is Kenny Chung.  I love my wife.
+			.join-date Joined 12/14/2013
+			.details.glyphicon.glyphicon-list-alt
+
+	.admin.common-section
+		.glyphicon.glyphicon-ok
+		span Admin
+	.admin.members-ui(data-ng-repeat="member in members | filter:search | filter:filterAdminByRole")
+		.profile
+			ocfc-user-image
+		.status Admin
+		.detail-info
+			.name{{member.firstName}}&nbsp{{member.lastName}}
+			.description Hi my name is Beland Huang.  Hi my name is Beland Huang.
+

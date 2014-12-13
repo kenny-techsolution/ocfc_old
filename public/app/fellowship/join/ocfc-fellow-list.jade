@@ -1,0 +1,14 @@
+//ocfc-fellow-list.jade
+.fellowships-wrapper.well.row(ng-repeat='fellowship in fellowships')
+	#fellow-img.col-xs-3
+		img(src='/css/images/IMG_5501.JPG')
+	.col-xs-6
+		h3.fellowship(ng-bind="fellowship.name") &nbsp;
+		p(style='margin-bottom:0px') Church-Name: CCIC
+		.fellowship(ng-bind="fellowship.zipcode") &nbsp;
+	#status.col-xs-1
+		.fellowship(ng-bind="fellowship.status") &nbsp;
+	.join-fellow-button-group.col-xs-4.btn-group
+		button.join-fellow-button-option.btn.btn-default(type='button',ng-click='joinFellowship(fellowship)',ng-show="fellowship.status=='None'") Join Fellowship
+		button.join-fellow-button-option.btn.btn-default(type='button',ng-click='approveFellowship(fellowship)',ng-show="fellowship.status=='Pending'") Approve
+		button.join-fellow-button-option.btn.btn-default(type='button',ng-click='cancelFellowship(fellowship)',ng-show="fellowship.status=='Pending'") Cancel

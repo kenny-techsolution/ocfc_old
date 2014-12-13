@@ -1,0 +1,115 @@
+//5.9.2014, Admin to create fellowship by filling out necessary info on below form
+//which will dynamically generate data stored in Mongodb
+//https://github.com/leon/angular-upload
+//create-fellow.jade
+#standardCol
+	h2 Pick One:
+	.option1
+		p My church has joined OCFC.  I would like to create a group for my fellowship.
+		input.form-control(ng-model='cfForm.zipcode', name='zipcode', ng-minlength='1',ng-maxlength='5',ng-pattern='/^[0-9]{5}$/',ng-required='true', type='text', placeholder='Enter zipcode to locate your church')
+		button.btn.btn-default(type='button', data-toggle='dropdown') Church
+			span.caret
+		br
+
+	.option2
+		p I would like to sign up for a 30 day trial before recommending to my Church.
+		br
+		p After trial period, you must be verified for authenticity of your  fellowship by doing 1 of the following:
+			ul
+				li Ask your church to join OCFC
+				li Provide info to be verified by OCFC.
+		br
+		.get-started-two.button.btn.btn-success() Get Started
+
+	form.form-horizontal(name='myFormNg')
+		.form-group
+			label.control-label.col-xs-3(for='inputFellowName') Fellowship Name
+			.col-xs-8
+				input#inputFellowName.form-control(ng-model='cfForm.fellowName',name='fellowName', type='fellowName', ng-minlength='1',ng-maxlength='50', placeholder='Type fellowship name')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.fellowName.$invalid||myFormNg.fellowName.$pristine')
+		.form-group
+			label.control-label.col-xs-3(for='inputDescription') Description
+			.col-xs-8
+				textarea#textarea.field.span12(rows='4',cols='70',ng-model='cfForm.description',name='description',ng-minlength="1",ng-maxlength="10000",ng-required='true',ng-click='proofUpload()',placeholder='About your fellowship')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.description.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputZip') Zipcode
+			.col-xs-8
+			input#inputZip.form-control(ng-model='cfForm.zipcode', name='zipcode', ng-minlength='1',ng-maxlength='5',ng-pattern='/^[0-9]{5}$/',ng-required='true', type='text', placeholder='Type zipcode')
+			.col-xs-1
+			span.valid-check(ng-hide='myFormNg.zipcode.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputUrl') URL
+			.col-xs-8
+			input#inputUrl.form-control(ng-model='cfForm.url',name='url',type='url', placeholder='Type church URL: http://www.example.com/myfile.html')
+		//.form-group
+			label.control-label.col-xs-3(for='inputPhone') Phone
+			.col-xs-8
+				input#inputPhone.form-control(ng-model='cfForm.phone', name='phone',ng-minlength="1",ng-maxlength="12",ng-required='true',type='number', placeholder='XXX-XXX-XXXX')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.phone.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputAddress') Address
+			.col-xs-8
+			input#inputAddress.form-control(ng-model='cfForm.address',name='address',ng-minlength="1",ng-maxlength="50",ng-required='true',type='text', placeholder='Type fellowship location')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.address.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputProof') Proof
+			.col-xs-8
+			input#inputProof.form-control(ng-model='cfForm.proof',type='text', placeholder='Upload proof of leadership')
+		.form-group
+			.col-xs-offset-3.col-xs-9
+				.btn-toolbar
+					.btn-group
+						button.btn.btn-success(ng-disabled='myFormNg.$invalid',type='submit',ng-click='createFellowship()') Submit Your Request
+					.btn-group
+						button.btn.btn-success(ng-click='resetCreateFellowship()',type='text') Reset
+			form.form-horizontal(name='myFormNg')
+		.form-group
+			label.control-label.col-xs-3(for='inputFellowName') Fellowship Name
+			.col-xs-8
+				input#inputFellowName.form-control(ng-model='cfForm.fellowName',name='fellowName', type='fellowName', ng-minlength='1',ng-maxlength='50', placeholder='Type fellowship name')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.fellowName.$invalid||myFormNg.fellowName.$pristine')
+		.form-group
+			label.control-label.col-xs-3(for='inputDescription') Description
+			.col-xs-8
+				textarea#textarea.field.span12(rows='4',cols='70',ng-model='cfForm.description',name='description',ng-minlength="1",ng-maxlength="10000",ng-required='true',ng-click='proofUpload()',placeholder='About your fellowship')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.description.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputZip') Zipcode
+			.col-xs-8
+			input#inputZip.form-control(ng-model='cfForm.zipcode', name='zipcode', ng-minlength='1',ng-maxlength='5',ng-pattern='/^[0-9]{5}$/',ng-required='true', type='text', placeholder='Type zipcode')
+			.col-xs-1
+			span.valid-check(ng-hide='myFormNg.zipcode.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputUrl') URL
+			.col-xs-8
+			input#inputUrl.form-control(ng-model='cfForm.url',name='url',type='url', placeholder='Type church URL: http://www.example.com/myfile.html')
+		//.form-group
+			label.control-label.col-xs-3(for='inputPhone') Phone
+			.col-xs-8
+				input#inputPhone.form-control(ng-model='cfForm.phone', name='phone',ng-minlength="1",ng-maxlength="12",ng-required='true',type='number', placeholder='XXX-XXX-XXXX')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.phone.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputAddress') Address
+			.col-xs-8
+			input#inputAddress.form-control(ng-model='cfForm.address',name='address',ng-minlength="1",ng-maxlength="50",ng-required='true',type='text', placeholder='Type fellowship location')
+			.col-xs-1
+				span.valid-check(ng-hide='myFormNg.address.$invalid')
+		//.form-group
+			label.control-label.col-xs-3(for='inputProof') Proof
+			.col-xs-8
+			input#inputProof.form-control(ng-model='cfForm.proof',type='text', placeholder='Upload proof of leadership')
+		.form-group
+			.col-xs-offset-3.col-xs-9
+				.btn-toolbar
+					.btn-group
+						button.btn.btn-success(ng-disabled='myFormNg.$invalid',type='submit',ng-click='createFellowship()') Create Trial Account
+					.btn-group
+						button.btn.btn-success(ng-click='resetCreateFellowship()',type='text') Reset

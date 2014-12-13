@@ -1,0 +1,86 @@
+//fellow-resource.jade
+#standardCol
+	.row
+		.col-xs-10
+			h3 Resources
+		.col-xs-2
+			.btn-group(dropdown)
+				button.btn.btn-default.dropdown-toggle(type='button')
+					| Create
+					span.caret
+					ul.dropdown-menu(role='menu')
+						li
+							a(href='#') Sermon
+						li
+							a(href='#') Testimonial
+						li
+							a(href='#') Other
+
+	#resource-filter.well.row
+		.col-xs-4.category-filter
+			h5 Filter by Category
+		.col-xs-8.category-type
+			span.input-group
+				input(type='checkbox')
+				| Sermon
+			span.input-group
+				input(type='checkbox')
+				| Testimonials
+			span.input-group
+				input(type='checkbox')
+				| Evangelism
+			span.input-group
+				input(type='checkbox')
+				| Books
+	#resource-filter.well.row
+		.col-xs-4.content-filter
+			h5 Filter by Content Type
+		.col-xs-8.content-type
+			span.input-group
+				input(type='checkbox')
+				| Video
+			span.input-group
+				input(type='checkbox')
+				| Audio
+			span.input-group
+				input(type='checkbox')
+				| Music
+			span.input-group
+				input(type='checkbox')
+				| Radio
+
+	h5 Sermon
+	.well
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg' style='width:100px; height:100px')
+			.col-xs-8
+				p 2/25/2014  David Pawson's Gensis
+				p This is a great teaching about the bible and this is really important thing to know. please watch this video.
+				h3 Watch Now
+	.well
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg' style='width:100px; height:100px')
+			.col-xs-8
+				p 4/30/2014  How to be a prayer warrior
+				p This is a great teaching about the bible and this is really important thing to know. please watch this video.
+				h3 Watch Now
+
+	h5 Testimony
+	.well
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg' style='width:100px; height:100px')
+			.col-xs-8
+				p 2/25/2014  David Pawson's Gensis
+				p This is a great teaching about the bible and this is really important thing to know. please watch this video.
+				h3 Watch Now
+	.well
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg' style='width:100px; height:100px')
+			.col-xs-8
+				p 4/30/2014  How to be a prayer warrior
+				p This is a great teaching about the bible and this is really important thing to know. please watch this video.
+				h3 Watch Now

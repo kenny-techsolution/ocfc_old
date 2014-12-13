@@ -1,0 +1,51 @@
+//fellow-photo.jade
+#standardCol
+  .form_controls
+    .upload_button_holder
+        .upload_button(href='#', ng-file-select='onFileSelect($files)', data-multiple='false', title='aaaa', onclick='this.value = null') Upload
+      .status {{status}}
+      .progress-bar
+        .progress(ng-init='progress=0')
+
+  h1 Photo Gallery
+  br
+  pre Angel Island Trip         (44 pics)       4/24/2014
+    a.edit-album-anchor Edit Album
+  a.add-photos-anchor Add Photos
+  a Remove Photos
+  #photo-album.well.photos
+    .row
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+    .row
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+      .col-xs-4
+        img(src='/css/images/kenny_face.jpg')
+
+	br
+	pre Help Out Homeless         (14 pics)       4/24/2014
+		a.edit-album-anchor Edit Album
+	a.add-photos-anchor Add Photos
+	a Remove Photos
+	#photo-album.well.photos
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')
+		.row
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')
+			.col-xs-4
+				img(src='/css/images/kenny_face.jpg')

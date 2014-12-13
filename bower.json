@@ -1,0 +1,27 @@
+{
+	"name": "ocfc",
+	"version": "0.0.0",
+	"authors": [
+		"Kenny Chung <yoyocicada@gmail.com>"
+	],
+	"description": "\"Extreme Tech Training Class\"",
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"jquery": "~2.1.0",
+		"toastr": "~2.0.1",
+		"angular": "~1.2.16",
+		"angular-resource": "~1.2.16",
+		"angular-animate": "~1.2.16",
+		"angular-route": "~1.2.16",
+		"bootstrap": "~3.1.1",
+		"angular-upload": "~1.0.10",
+		"angular-file-upload": "~0.5.7",
+		"angular-bootstrap": "~0.11.0",
+		"underscore": "~1.6.0",
+		"angular-socket-io": "~0.6.0",
+		"ng-file-upload-shim": "1.6.x",
+		"ng-file-upload": "1.6.x",
+		"cloudinary_ng": ">=0.1.2"
+	}
+}

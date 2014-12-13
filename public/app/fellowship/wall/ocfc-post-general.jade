@@ -1,0 +1,26 @@
+//ocfc-post-general.jade
+.general-feed-display.common-post-ui
+	.line-decor
+	.dot-decor
+	.vertical-line.timeline
+	.post-type-icon
+		.glyphicon.glyphicon-align-justify
+		span General
+	ocfc-user-image
+	.post-content
+		ocfc-post-heading
+		div.post-content-photos
+			.lg-content
+				img(src='/css/images/TimothyFellowship1.jpg')
+			.rt-content
+				img(src='/css/images/TimothyFellowship4.jpg')
+			.rb-content
+				img(src='/css/images/TimothyFellowship2.jpg')
+		.post-content-input{{post.content}}
+		ocfc-post-res-icons
+		.user-comment
+			//ocfc-user-image
+			//.content
+			//	p comments goes here
+			//	p Jane 10:20PM
+		ocfc-user-comment-input

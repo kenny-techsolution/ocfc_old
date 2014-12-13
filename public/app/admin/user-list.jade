@@ -1,0 +1,9 @@
+//Creates a user first name and last name list
+.container
+	table.table
+		tr(ng-repeat="user in users")
+			//for each user in the users array
+			td(ng-bind-template="{{user.firstName}} {{user.lastName}}")&nbsp;
+
+
+

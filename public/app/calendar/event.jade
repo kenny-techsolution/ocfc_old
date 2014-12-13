@@ -1,0 +1,85 @@
+//6.15.2014, add event page to display all events created by an individual
+//event.jade
+#standardCol
+	#event-banner.well
+		.row
+			.col-xs-5
+				h3 Angel Island Trip
+			.col-xs-4
+				h3 7/5/2014
+			.col-xs-3
+				button.btn.btn-primary(type='button') Create Photo Album
+	.well
+		.row
+			.col-xs-9
+				p Public - Hosted By Mei Zhang
+			.col-xs-1
+				.btn-group(dropdown)
+					button.btn.btn-default.dropdown-toggle(type='button')
+						| Going
+						span.caret
+						ul.dropdown-menu(role='menu')
+							li
+								a(href='#') Maybe
+							li.divider
+							li
+								a(href='#') Not Going
+			.col-xs-1
+				.btn-group(dropdown)
+					button.btn.btn-default.dropdown-toggle(type='button')
+						| Invite
+						span.caret
+						ul.dropdown-menu(role='menu')
+							li
+								a(href='#') Choose Friends
+							li.divider
+							li
+								a(href='#') Share Event
+	.well
+		.row
+			.col-xs-6
+				Event Description: this is a very challenging climbing event. please bring water and food for lunch. see you all there!
+			.col-xs-6
+				.well
+					p Mei is going
+				.well
+					p GUESTS
+					.row
+						.col-xs-4
+							p 54
+							p going
+						.col-xs-4
+							p 0
+							p maybe
+						.col-xs-4
+							p 74
+							p invited
+	.well
+		.post-panel.panel.panel-default
+			.panel-heading
+				.row
+					.col-md-2
+						h3.span.label.label-default POSTS
+					.col-md-10(style="text-align:center")
+						pre Write Post    Add Photo/Video    Ask Question
+				.panel-body.Panel
+				.panel-footer
+					.row
+						.media
+							a.pull-left(href='#')
+								img.media-object(src='../css/images/kenny_face.jpg', alt='...',style='width: 54px; height: 54px; border: 2px solid white')
+								.media-body
+									h6.media-heading
+									p Kenny Chung
+									p May 29 at 10:10pm
+					.row
+						.input-group
+							input.form-control(type='text',placeholder="Share something")
+							span.input-group-btn
+								button.btn.btn-default(type='button') Enter
+
+
+
+
+
+

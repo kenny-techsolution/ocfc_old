@@ -1,0 +1,30 @@
+#standardCol .option1 {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 12px;
+}
+#standardCol .option1 p {
+  width: auto;
+  height: 158px;
+}
+#standardCol .option1 input {
+  width: 217px;
+  display: inline-block;
+}
+#standardCol .option2 {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  top: -250px;
+  left: 380px;
+  font-size: 12px;
+}
+#standardCol .option2 .get-started-two {
+  position: absolute;
+  left: 102px;
+}

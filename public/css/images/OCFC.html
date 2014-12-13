@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head><title>OCFC</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/vendor/toastr/toastr.css">
+	<link rel="stylesheet" href="/css/general.css">
+	<link rel="stylesheet" href="/css/navbar-login.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/member.css">
+	<link rel="stylesheet" href="/css/create-fellow.css">
+	<link rel="stylesheet" href="/css/fellowship.css">
+	<link rel="stylesheet" href="/css/join-fellow.css">
+	<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
+</head>
+<body ng-app="app" ng-controller="CommonCtrl"><!--include currentUser file-->
+<!--If statement is true then convert record into JSON format-->
+<!--turns bootstrappedUser object into string to be sent over to server-->
+<script>window.bootstrappedUserObject = {"firstName": "Mei", "lastName": "Zhang", "userName": "mei", "salt": "AKUX/iE6qtvl3Uz9ZV2tH5vXxYRbNxb2xR5PEYtyNYsiPReZB26GEXAS3r3X5qqbPTJTKJ1FMdGo/7jK53hx8V/f4fMvsHeN3V/V+o+T6sxrn0zzmjeTgYQPeyYLf7gFGlFPPxgpU98/ttDuoP+siLEsy9USwjIX001wTKXX5Gk=", "hashed_pwd": "8070c8c4a386bf5c7f0456f0bfe59dc70b3c5ffa", "_id": "537d76eea0a7a3a641b63273", "__v": 0, "roles": ["churchAdmin"]}
+
+
+</script>
+<!--4.29.2014 adding header nav bar-->
+<div id="header" class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-header"><a href="/" class="navbar-brand"></a></div>
+	<div class="navbar-collapse collapse"><!--ul.nav.navbar-nav--><!--    li--><!--        a(href="/") Home-->
+		<!--    li--><!--        a(href="/courses") Courses-->
+		<div ng-show="identity.isAuthenticated()" class="toolbar-search"><i
+			class="glyphicon glyphicon-search"></i><input type="search" placeholder="search" class="form-control"></div>
+		<div ng-show="identity.isAuthenticated()" class="toolbar-language"><i
+			class="glyphicon glyphicon-globe"></i><span>English</span></div>
+		<div ng-show="identity.isAuthenticated()" class="toolbar-message"><i class="glyphicon glyphicon-comment"></i>
+		</div>
+		<div ng-show="identity.isAuthenticated()" class="toolbar-notification"><i class="glyphicon glyphicon-bell"></i>
+		</div>
+		<div ng-include="'/partials/account/navbar-login'"></div>
+	</div>
+</div>
+<!--4.29.2014 adding header nav bar ends--><!--.navbar.navbar-inverse.navbar-fixed-top--><!--    .container-->
+<div id="wrapper">
+	<div id="intro-pg" ng-hide="identity.isAuthenticated()">
+		<div id="signupSection">
+			<div class="row">
+				<div class="col-md-7"><h2>Welcome to One Chirst for Christ</h2><h4>We love you to join and be part of
+					our one big family!</h4></div>
+				<div class="col-md-5">
+					<div class="well">
+						<form name="signupForm" class="form-horizontal">
+							<fieldset>
+								<legend>Sign Up</legend>
+								<p>It's free and always will be.</p>
+
+								<div class="form-group"><label for="fname" class="col-md-5 control-label">First
+									Name</label>
+
+									<div class="col-md-7"><input name="fname" type="fname" placeholder="First Name"
+									                             ng-model="fname" required class="form-control"></div>
+								</div>
+								<div class="form-group"><label for="lname" class="col-md-5 control-label">Last
+									Name</label>
+
+									<div class="col-md-7"><input name="lname" type="lname" placeholder="Last Name"
+									                             ng-model="lname" required class="form-control"></div>
+								</div>
+								<div class="form-group"><label for="email" class="col-md-5 control-label">Email</label>
+
+									<div class="col-md-7"><input name="email" type="email" placeholder="Email"
+									                             ng-model="email" required class="form-control"></div>
+								</div>
+								<div class="form-group"><label for="password"
+								                               class="col-md-5 control-label">Password</label>
+
+									<div class="col-md-7"><input name="password" type="password" placeholder="Password"
+									                             ng-model="password" required class="form-control">
+									</div>
+								</div>
+								<div class="form-group"><label for="ageRange" class="col-md-5 control-label">Age
+									Range</label>
+
+									<div class="col-md-7">
+										<div dropdown class="btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle">Age<span
+												class="caret"></span></button>
+											<ul role="menu" class="dropdown-menu">
+												<li><a href="#">Under 18</a></li>
+												<li><a href="#">18-24</a></li>
+												<li><a href="#">25-34</a></li>
+												<li><a href="#">35-54</a></li>
+												<li class="divider"></li>
+												<li><a href="#">55 Up</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-10 col-md-offset-2">
+										<div class="pull-right">
+											<button ng-click="signup()" ng-disabled="signupForm.$invalid"
+											        class="btn btn-success btn-lg">Sign up
+											</button>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar-wrapper">
+		<div id="sidebar">
+			<ul class="nav list-group">
+				<li><a href="/personalGrowth" class="list-group-item"><i class="icon-home icon-1x"></i>Personal
+					Growth</a></li>
+				<li><a href="/Fellow" class="list-group-item"><i class="icon-home icon-1x"></i>Fellowship</a></li>
+				<li class="sub-menu sub-menu-actions row"><a href="/joinFellow" class="list-group-item col-xs-6"><i
+					class="icon-home icon-1x"></i><span class="glyphicon glyphicon-plus"></span>Join</a><a
+					href="/createFellow" class="list-group-item col-xs-6"><i class="icon-home icon-1x"></i><span
+					class="glyphicon glyphicon-plus"></span>Create</a></li>
+				<div ng-repeat="myApprvFellow in initObj.myFellowships" class="myApprvFellows-wrapper">
+					<li class="sub-menu"><a href="/fellowship/{{myApprvFellow._id}}" class="list-group-item"><i
+						class="icon-home icon-1x"></i>{{myApprvFellow.name}}
+						<div class="span badge">42</div>
+					</a></li>
+				</div>
+				<li><a href="/church" class="list-group-item"><i class="icon-home icon-1x"></i>Church</a></li>
+				<li><a href="/world" class="list-group-item"><i class="icon-home icon-1x"></i>World</a></li>
+				<li><a href="/ocfcAdmin" class="list-group-item"><i class="icon-home icon-1x"></i>OCFC Admin</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main-wrapper" class="pull-right">
+		<div id="main" ng-view></div>
+	</div>
+</div>
+<!--section.content--><!--    div(ng-view)--><!--footer.container.text-center--><!--    p &copy; 2014 One Church for Christ Corp International Ltd.
+--><!--include scripts file--><!--This file contains all script dependencies need for the project-->
+<script type="text/javascript" src="/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="/vendor/toastr/toastr.js"></script>
+<script type="text/javascript" src="/vendor/angular/angular.js"></script>
+<script type="text/javascript" src="/vendor/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="/vendor/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="/vendor/angular-upload/angular-upload.js"></script>
+<script type="text/javascript" src="/vendor/angular-file-upload/angular-file-upload.js"></script>
+<script type="text/javascript" src="/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="/app/app.js"></script>
+<script type="text/javascript" src="/app/directives/ngThumb.js"></script>
+<script type="text/javascript" src="/app/main/MainCtrl.js"></script>
+<script type="text/javascript" src="/app/account/Identity.js"></script>
+<script type="text/javascript" src="/app/common/Notifier.js"></script>
+<script type="text/javascript" src="/app/account/Auth.js"></script>
+<script type="text/javascript" src="/app/account/User.js"></script>
+<script type="text/javascript" src="/app/account/SignupCtrl.js"></script>
+<script type="text/javascript" src="/app/account/ProfileCtrl.js"></script>
+<script type="text/javascript" src="/app/admin/UserListCtrl.js"></script>
+<script type="text/javascript" src="/app/courses/mvCourseListCtrl.js"></script>
+<script type="text/javascript" src="/app/courses/mvCourse.js"></script>
+<script type="text/javascript" src="/app/courses/CachedCourses.js"></script>
+<script type="text/javascript" src="/app/courses/mvCourseDetailCtrl.js"></script>
+<script type="text/javascript" src="/app/fellowship/FellowMemSvc.js"></script>
+<script type="text/javascript" src="/app/fellowship/JoinFellowCtrl.js"></script>
+<script type="text/javascript" src="/app/fellowship/FellowshipSvc.js"></script>
+<script type="text/javascript" src="/app/fellowship/PostSvc.js"></script>
+<script type="text/javascript" src="/app/fellowship/FellowshipSvcCtrl.js"></script>
+<script type="text/javascript" src="/app/fellowship/MemberCtrl.js"></script>
+<script type="text/javascript" src="/app/fellowship/CreateFellowCtrl.js"></script>
+<script type="text/javascript" src="/app/fellowship/mvApprvFellowCtrl.js"></script>
+<script type="text/javascript" src="/app/common/SetupSvc.js"></script>
+<script type="text/javascript" src="/app/common/CommonCtrl.js"></script>
+</body>
+</html>

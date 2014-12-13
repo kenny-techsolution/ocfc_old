@@ -1,0 +1,84 @@
+//Navigation page
+//index.jade
+extends ../includes/layout
+
+block main-content
+	//4.29.2014 adding header nav bar
+	#header.navbar.navbar-default.navbar-fixed-top
+		.navbar-header
+			a.navbar-brand(href="/")
+		.navbar-collapse.collapse
+			//ul.nav.navbar-nav
+			//    li
+			//        a(href="/") Home
+			//    li
+			//        a(href="/courses") Courses
+
+			div.toolbar-search(ng-show="identity.isAuthenticated()")
+				i.glyphicon.glyphicon-search
+				input.form-control(type='search', placeholder='search')
+			div.toolbar-language(ng-show="identity.isAuthenticated()")
+				i.glyphicon.glyphicon-globe
+				span English
+			div.toolbar-message(ng-show="identity.isAuthenticated()")
+				i.glyphicon.glyphicon-comment
+			div.toolbar-notification(ng-show="identity.isAuthenticated()")
+				i.glyphicon.glyphicon-bell
+			div(ng-include="'/partials/account/access/navbar-login'")
+	//4.29.2014 adding header nav bar ends
+	//.navbar.navbar-inverse.navbar-fixed-top
+	//    .container
+	#wrapper
+		#intro-pg(ng-hide="identity.isAuthenticated()")
+			#signupSection
+				.row
+					.col-md-7
+						h2 Welcome to One Chirst for Christ
+						h4 We love you to join and be part of our big family!
+					.col-md-5
+						.well(ng-include="'/partials/account/signup/signup'")
+		#sidebar-wrapper
+			#sidebar
+				ul.nav.list-group
+					li
+						a.list-group-item(href='')
+							i.icon-home.icon-1x
+							| Personal Growth
+					li
+						a.list-group-item(href='')
+							i.icon-home.icon-1x
+							| Fellowship
+					li.sub-menu.sub-menu-actions.row
+						a.list-group-item.col-xs-6(href='/joinFellow')
+							i.icon-home.icon-1x
+							span.glyphicon.glyphicon-plus
+							| Join
+						a.list-group-item.col-xs-6(href='/createFellow')
+							i.icon-home.icon-1x
+							span.glyphicon.glyphicon-plus
+							| Create
+					li
+						ul.fellowship-container(ng-repeat='fellowship in initObj.myFellowships')
+							ocfc-collapsible-menu(fellowship-data="fellowship")
+					li
+						a.list-group-item(href='')
+							i.icon-home.icon-1x
+							| Church
+					li
+						a.list-group-item(href='')
+							i.icon-home.icon-1x
+							| World
+					li
+						a.list-group-item(href='/ocfcAdmin')
+							i.icon-home.icon-1x
+							| OCFC Admin
+
+		#main-wrapper.pull-right
+			#main(ng-view)
+
+
+	//section.content
+	//    div(ng-view)
+
+	//footer.container.text-center
+	//    p &copy; 2014 One Church for Christ Corp International Ltd.

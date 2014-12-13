@@ -1,0 +1,19 @@
+//ocfc-post-question.jade
+.question-feed-display.common-post-ui
+	.line-decor
+	.dot-decor
+	.vertical-line.timeline
+	.post-type-icon
+		.glyphicon.glyphicon-question-sign
+		span Question
+	ocfc-user-image
+	.post-content
+		ocfc-post-heading
+		.post-content-input{{postObj.questionPost.content}}
+		ocfc-post-res-icons
+		.user-comment
+			//ocfc-user-image
+			//.content
+			//	p This is a great question!
+			//	p Jane 10:20PM
+		ocfc-user-comment-input

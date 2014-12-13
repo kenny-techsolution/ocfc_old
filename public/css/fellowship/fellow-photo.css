@@ -1,0 +1,16 @@
+#standardCol a.add-photos-anchor {
+  padding: 15px;
+  margin-left: 585px;
+}
+#standardCol pre a.edit-album-anchor {
+  margin-left: 280px;
+}
+#photo-album img {
+  width: 220px;
+  height: 220px;
+  border: 1px solid #000;
+  margin-bottom: 15px;
+}
+#photo-album button.btn {
+  width: 15px;
+}

@@ -1,0 +1,204 @@
+#intro-pg {
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  height: 100%;
+  background-color: #3a92c8;
+  background: radial-gradient(circle, #94d2f8, #3a92c8);
+  z-index: 5000;
+}
+#signupSection .well form.form-horizontal fieldset {
+  font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+#signupSection .well form.form-horizontal fieldset legend {
+  font-size: 40px;
+}
+#signupSection .well form.form-horizontal fieldset p {
+  font-size: 22px;
+}
+.sub-menu a {
+  background-color: #eee;
+  padding-left: 20px;
+}
+.sub-menu span.glyphicon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sub-menu-actions a {
+  font-weight: bold;
+  color: #2fa9cf;
+  background-color: #c9c9c9;
+}
+.sub-menu-actions a.list-group-item {
+  border-bottom: 1px solid #ddd;
+}
+.sub-menu-actions a.list-group-item:last-child {
+  color: #e9de60;
+  border-left: 1px solid #dfdddd !important;
+}
+.sub-menu-actions a.list-group-item:last-child:hover {
+  color: #fff;
+  background-color: #e9de60 !important;
+}
+.sub-menu-actions a:hover {
+  color: #fff;
+  background-color: #2fa9cf !important;
+}
+.sub-menu-actions span.glyphicon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  border-top: 1px solid #000;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.top-padding-med {
+  padding-top: 10px;
+}
+.margin-left-med {
+  margin-left: 10px;
+}
+.content-right {
+  position: absolute;
+  width: 100%;
+  padding-left: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: transparent;
+  overflow-y: auto;
+  z-index: 1;
+}
+.content-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2;
+}
+.content-left .container {
+  width: 601px;
+}
+#joinFellow .list-page {
+  padding-top: 60px;
+  width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#joinFellow .list-page .fellowships-wrapper .well.well-lg.fellowship {
+  position: relative;
+  background: #fff;
+}
+#joinFellow .list-page .fellowships-wrapper .well.well-lg.fellowship .btn-group {
+  position: absolute;
+  right: 60px;
+}
+body {
+  padding-top: 60px;
+  overflow: hidden;
+}
+#header {
+  margin-bottom: 0px;
+  min-width: 1024px;
+  height: 70px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.7);
+  background-image: url("../images/ocfc_logo.png");
+  background-repeat: no-repeat;
+  background-color: #d3d3d3;
+}
+#wrapper {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  min-width: 1024px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+#main-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 70px 0 0px 200px;
+  width: 100%;
+}
+#main {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+#main .btn {
+  font-size: 12px;
+}
+#main .form-control {
+  font-size: 12px;
+}
+.container.ng-scope {
+  width: 530px;
+  margin-left: 15px;
+}
+#sidebar-wrapper #sidebar {
+  height: 100%;
+  padding: 70px 0 0px 0;
+  position: fixed;
+  left: 0px;
+  border-right: 0px solid gra;
+  float: left;
+  width: 200px;
+  z-index: 400;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
+}
+#sidebar-wrapper #sidebar ul.nav.list-group li.sub-menu.sub-menu-actions.row {
+  width: 215px;
+}
+#sidebar-wrapper #sidebar ul.nav.list-group li.sub-menu.sub-menu-actions.row a.list-group-item {
+  border-radius: 0;
+  font-size: 12px;
+}
+#sidebar-wrapper #sidebar .fellowship-container {
+  padding-left: 0px;
+  font-size: 12px;
+}
+#sidebar-wrapper #sidebar .fellowship-container .fellowship-sub-menu .menu-item a {
+  background-color: #454147;
+  color: #fff;
+  border-radius: 0;
+  padding: 5px 30px 5px 30px;
+  font-size: 12px;
+}
+.fellowship-sub-menu .list-group-item {
+  border: none;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+/* remember to add this */
+  display: block !important;
+  opacity: 1;
+  height: 200px;
+}
+.animate-show.ng-hide {
+  opacity: 0;
+  height: 0px;
+}

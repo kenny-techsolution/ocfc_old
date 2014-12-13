@@ -1,0 +1,14 @@
+//ocfc-signin.jade
+form.signin-form.navbar-form(ng-hide="identity.isAuthenticated()")
+	.form-group
+		//create a variable called username
+		input.form-control(type='text',placeholder="Email",ng-model="username")
+	.form-group
+		//create a variable called password
+		input.form-control(type="password",placeholder="Password",ng-model="password")
+	//calls $scope.signin
+	button.btn.btn-primary(ng-click="signin(username,password)") Log In
+
+
+
+

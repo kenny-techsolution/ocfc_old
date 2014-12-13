@@ -1,0 +1,59 @@
+#standardCol
+	.common-widget-ui.well
+		.post-header-row
+			.post-header-title
+				p Make a
+				ocfc-wall-category
+		#post-widget.post-show(ng-show='postType==="general"')
+			textarea.common-text-input.form-control(type='text',ng-model='postObj.content',placeholder='{{postObj.generalPost.placeholder}}')
+
+		#event-widget.post-show(ng-show="postType==='event'")
+			.event-container
+				.event-name
+					p Title:
+					input(type='text',ng-model='postObj.title')
+				textarea.event-detail.form-control(type='text',ng-model='postObj.content',placeholder='{{postObj.eventPost.placeholder}}')
+				.event-scheduler
+					p From:
+					.calendar
+						input(type='date',ng-model='postObj.eventPost.from_date')
+					.time
+						input(type='time',ng-model='postObj.eventPost.from_date_time')
+					p To:
+					.calendar
+						input(type='date',ng-model='postObj.eventPost.to_date')
+					.time
+						input(type='time',ng-model='postObj.eventPost.to_date_time')
+					p Where:
+					.input
+						input(type='text',ng-model='postObj.eventPost.where')
+					p.welcome Welcome:
+					.input
+						input(type='text',ng-model='postObj.eventPost.welcome')
+		#testimony-widget.post-show(ng-show='postType==="testimony"')
+			p Title:
+			input(type='text',ng-model='postObj.title')
+			textarea.common-text-input.form-control(type='text',ng-model='postObj.content',placeholder='{{postObj.testimonyPost.placeholder}}')
+		#question-widget.post-show(ng-show='postType==="question"')
+			textarea.common-text-input.form-control(type='text',ng-model='postObj.content',placeholder='{{postObj.questionPost.placeholder}}')
+		.common-footer.row
+			ocfc-view-permission
+			ocfc-post-icons
+			.common-button-container
+				button.btn.btn-default.btn-sm(type='submit',ng-click='createPost($event, 0)',ng-show='postType==="testimony"') Post
+				button.btn.btn-default.btn-sm(type='submit',ng-click='createPost($event, 1)',ng-show='postType==="question"') Post
+				button.btn.btn-default.btn-sm(type='submit',ng-click='createPost($event, 2)',ng-show='postType==="general"') Post
+				button.btn.btn-default.btn-sm(type='submit',ng-click='createPost($event, 3)',ng-show='postType==="event"') Post
+	#post-feed.well
+		ocfc-filter-by-types
+		.date-separator Today
+		div(data-ng-repeat='post in posts' ng-class='{postAnimate:postsLoaded==true}')
+			div(ng-switch="post.type")
+				div(ng-switch-when=0)
+					ocfc-post-testimony(post="post")
+				div(ng-switch-when=1)
+					ocfc-post-question(post="post")
+				div(ng-switch-when=2)
+					ocfc-post-general(post="post")
+				div(ng-switch-when=3)
+					ocfc-post-event(post="post")
